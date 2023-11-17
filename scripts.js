@@ -1,40 +1,52 @@
 // Make function to get computers choice
-
 function getComputerChoice(min, max) {
     let arr = ["rock", "paper", "scissor"];
-    return(arr[(Math.floor(Math.random() * arr.length))]);
-    }; 
-// Make function to get players choice using prompt()
-function getPlayerChoice() {
-  let playerChoice = prompt("Rock, Paper or Scissors?").toLowerCase();
-  return playerChoice;
-}
+    let result = (arr[(Math.floor(Math.random() * arr.length))]);
+    return result;  
+  }; 
 /* Make function to play one round, using 2 parameters
 (remember to return results) */
 let playerScore = 0;
 let computerScore = 0;
-function playRound(playerSelection, computerSelection) {
-if 
+function playRound(playerChoice, computerChoice) {
+  let playerSelection = prompt("Rock, Paper or Scissors?").toLowerCase();
+  
+  let computerSelection = getComputerChoice();
+  
+  if 
   (playerSelection === computerSelection){
     return String("Tie")
 }else if
   ((playerSelection === "rock") && (computerSelection === "scissor")) {
     playerScore++;
-    return String("you win1");
+    return String("Rock beats Scissor you win!");
 }else if 
   ((playerSelection === "scissor") && (computerSelection === "paper")){
     playerScore++;
-    return String("you win2");
+    return String("Scissor beats Paper you win!");
 }else if 
   ((playerSelection === "paper") && (computerSelection === "rock")){
     playerScore++;
-    return String("you win3");
+    return String("Paper beats Rock you win!");
 }else {
   computerScore++;
-  return String("LOSER")
+  return String("You Lose :(")
 }
 } 
-const playerSelection = getPlayerChoice();
-const computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection))
 //Make function to play 5 rounds and keep score
+function game() {
+  console.log(playRound());
+  console.log(playRound());
+  console.log(playRound());
+  console.log(playRound());
+  console.log(playRound());
+
+  if (playerScore > computerScore) {
+    return String("You Win the game!!!")
+  }else if (playerScore < computerScore) {
+    return String("You Lost the game :(")
+  }else {
+    return String("Its a Draw")
+  }
+};
+console.log(game())
