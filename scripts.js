@@ -56,3 +56,14 @@ function game() {
   }
 };
 console.log(game()); */
+
+const list = document.querySelector('#rock');
+list.classList.add('rock');
+const list = document.querySelector('#paper');
+list.classList.add('paper');
+const list = document.querySelector('#scissors');
+list.classList.add('scissors');
+
+document.getElementById('rock').onclick = function() {
+    playRound;
+}
