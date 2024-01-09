@@ -57,13 +57,13 @@ function game() {
 };
 console.log(game()); */
 
-const list = document.querySelector('#rock');
-list.classList.add('rock');
-const list = document.querySelector('#paper');
-list.classList.add('paper');
-const list = document.querySelector('#scissors');
-list.classList.add('scissors');
+const rock = document.querySelector('#rock');
+rock.classList.add('rock');
+const paper = document.querySelector('#paper');
+paper.classList.add('paper');
+const scissors = document.querySelector('#scissors');
+scissors.classList.add('scissors');
 
 document.getElementById('rock').onclick = function() {
-    playRound;
-}
+    playRound();
+};
