@@ -14,7 +14,7 @@ let playerScore = 0;
 let computerScore = 0;
 
 function playRound(playerChoice, computerChoice) {
-  let playerSelection = prompt("Rock, Paper or Scissors?").toLowerCase();
+  let playerSelection = playerChoice //prompt("Rock, Paper or Scissors?").toLowerCase();
   
   let computerSelection = getComputerChoice();
   
@@ -63,7 +63,16 @@ const paper = document.querySelector('#paper');
 paper.classList.add('paper');
 const scissors = document.querySelector('#scissors');
 scissors.classList.add('scissors');
+const score = document.querySelector('#score');
+score.classList.add('score');
 
 document.getElementById('rock').onclick = function() {
-    playRound();
+    console.log(playRound("rock", getComputerChoice));    
 };
+document.getElementById('paper').onclick = function() {
+  console.log(playRound("paper", getComputerChoice));    
+};
+document.getElementById('scissors').onclick = function() {
+  console.log(playRound("scissor", getComputerChoice));    
+};
+
