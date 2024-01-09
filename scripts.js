@@ -39,7 +39,7 @@ function playRound(playerChoice, computerChoice) {
   }
 }
 
-//Make function to play 5 rounds and keep score
+/* //Make function to play 5 rounds and keep score
 function game() {
   console.log(playRound());
   console.log(playRound());
@@ -55,4 +55,4 @@ function game() {
     return String("Its a Draw")
   }
 };
-console.log(game());
+console.log(game()); */
