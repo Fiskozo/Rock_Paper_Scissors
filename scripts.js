@@ -24,7 +24,11 @@ function playRound(playerChoice, computerChoice) {
   }else if
     ((playerSelection === "rock") && (computerSelection === "scissor")) {
       playerScore++;
-      return String("Rock beats Scissor you win!");
+      const span = document.createElement('span');
+      span.classList.add('span');
+      span.textContent = "Rock beats Scissor you win!"
+      score.appendChild(span);
+      //return String("Rock beats Scissor you win!");
   }else if 
     ((playerSelection === "scissor") && (computerSelection === "paper")){
       playerScore++;
@@ -67,7 +71,7 @@ const score = document.querySelector('#score');
 score.classList.add('score');
 
 document.getElementById('rock').onclick = function() {
-    console.log(playRound("rock", getComputerChoice));    
+    console.log(playRound("rock", getComputerChoice));  
 };
 document.getElementById('paper').onclick = function() {
   console.log(playRound("paper", getComputerChoice));    
