@@ -10,44 +10,30 @@ function getComputerChoice(min, max) {
 (remember to return results) */
 
 let playerScore = 0;
-
 let computerScore = 0;
 
 function playRound(playerChoice, computerChoice) {
-  let playerSelection = playerChoice //prompt("Rock, Paper or Scissors?").toLowerCase();
-  
+  let playerSelection = playerChoice  
   let computerSelection = getComputerChoice();
-  
+
   if 
   (playerSelection === computerSelection){
-    return String("Tie")
+    span.textContent = "Tie"
   }else if
     ((playerSelection === "rock") && (computerSelection === "scissor")) {
       playerScore++;
-      const span = document.createElement('span');
-      span.classList.add('span');
       span.textContent = "Rock beats Scissor you win!"
-      score.appendChild(span);
   }else if 
     ((playerSelection === "scissor") && (computerSelection === "paper")){
       playerScore++;
-      const span = document.createElement('span');
-      span.classList.add('span');
       span.textContent = "Scissor beats Paper you win!"
-      score.appendChild(span);
   }else if 
     ((playerSelection === "paper") && (computerSelection === "rock")){
       playerScore++;
-      const span = document.createElement('span');
-      span.classList.add('span');
       span.textContent = "Paper beats Rock you win!"
-      score.appendChild(span);
   }else {
     computerScore++;
-    const span = document.createElement('span');
-    span.classList.add('span');
     span.textContent = "You Lose :("
-    score.appendChild(span);
   }
 }
 
@@ -77,6 +63,8 @@ const scissors = document.querySelector('#scissors');
 scissors.classList.add('scissors');
 const score = document.querySelector('#score');
 score.classList.add('score');
+const span = document.querySelector('#span');
+span.classList.add('span');
 
 document.getElementById('rock').onclick = function() {
     console.log(playRound("rock", getComputerChoice));  
