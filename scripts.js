@@ -1,13 +1,9 @@
-// Make function to get computers choice
 
 function getComputerChoice(min, max) {
     let arr = ["rock", "paper", "scissor"];
     let result = (arr[(Math.floor(Math.random() * arr.length))]);
     return result;  
   }; 
-
-/* Make function to play one round, using 2 parameters
-(remember to return results) */
 
 let playerScore = 0;
 let computerScore = 0;
@@ -36,24 +32,6 @@ function playRound(playerChoice, computerChoice) {
     winner.textContent = "You Lose :("
   }
 }
-
-/* //Make function to play 5 rounds and keep score
-function game() {
-  console.log(playRound());
-  console.log(playRound());
-  console.log(playRound());
-  console.log(playRound());
-  console.log(playRound());
-
-  if (playerScore > computerScore) {
-    return String("You Win the game!!!")
-  }else if (playerScore < computerScore) {
-    return String("You Lost the game :(")
-  }else {
-    return String("Its a Draw")
-  }
-};
-console.log(game()); */
 
 const rock = document.querySelector('#rock');
 rock.classList.add('rock');
