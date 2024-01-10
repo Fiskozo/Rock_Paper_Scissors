@@ -31,6 +31,7 @@ function playRound(playerChoice, computerChoice) {
     computerScore++;
     winner.textContent = "You Lose :("
   }
+  currentScore.textContent = "you:"+playerScore+" AI:"+computerScore; 
 }
 
 const rock = document.querySelector('#rock');
@@ -43,6 +44,8 @@ const score = document.querySelector('#score');
 score.classList.add('score');
 const winner = document.querySelector('#winner');
 winner.classList.add('winner');
+const currentScore = document.querySelector('#currentScore');
+currentScore.classList.add('currentScore');
 
 document.getElementById('rock').onclick = function() {
     console.log(playRound("rock", getComputerChoice));  
@@ -53,4 +56,5 @@ document.getElementById('paper').onclick = function() {
 document.getElementById('scissors').onclick = function() {
   console.log(playRound("scissor", getComputerChoice));    
 };
+
 
