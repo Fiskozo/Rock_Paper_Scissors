@@ -33,12 +33,16 @@ function playRound(playerChoice, computerChoice) {
   }
   currentScore.textContent = "you:"+playerScore+" AI:"+computerScore;
   
-  if (playerScore > 3) {
-    champion.textContent = "You Win the game!!!"
-  }else if (computerScore < 3) {
-    champion.textContent= "You Lost the game :("
+  if (playerScore > 2) {
+    champion.textContent = "You Win the game!!!";
+    playerScore = 0;
+    computerScore = 0;    
+  }else if (computerScore > 2) {
+    champion.textContent = "You Lost the game :(" ;
+    playerScore = 0;
+    computerScore = 0; 
   }else {
-    return String("Its a Draw")
+    champion.textContent = ""
   }
 }
 
@@ -58,13 +62,13 @@ const champion = document.querySelector('#champion');
 champion.classList.add('champion');
 
 document.getElementById('rock').onclick = function() {
-    console.log(playRound("rock", getComputerChoice));  
+    playRound("rock", getComputerChoice);  
 };
 document.getElementById('paper').onclick = function() {
-  console.log(playRound("paper", getComputerChoice));    
+  playRound("paper", getComputerChoice);    
 };
 document.getElementById('scissors').onclick = function() {
-  console.log(playRound("scissor", getComputerChoice));    
+  playRound("scissor", getComputerChoice);    
 };
 
 
