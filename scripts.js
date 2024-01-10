@@ -28,18 +28,26 @@ function playRound(playerChoice, computerChoice) {
       span.classList.add('span');
       span.textContent = "Rock beats Scissor you win!"
       score.appendChild(span);
-      //return String("Rock beats Scissor you win!");
   }else if 
     ((playerSelection === "scissor") && (computerSelection === "paper")){
       playerScore++;
-      return String("Scissor beats Paper you win!");
+      const span = document.createElement('span');
+      span.classList.add('span');
+      span.textContent = "Scissor beats Paper you win!"
+      score.appendChild(span);
   }else if 
     ((playerSelection === "paper") && (computerSelection === "rock")){
       playerScore++;
-      return String("Paper beats Rock you win!");
+      const span = document.createElement('span');
+      span.classList.add('span');
+      span.textContent = "Paper beats Rock you win!"
+      score.appendChild(span);
   }else {
     computerScore++;
-    return String("You Lose :(")
+    const span = document.createElement('span');
+    span.classList.add('span');
+    span.textContent = "You Lose :("
+    score.appendChild(span);
   }
 }
 
