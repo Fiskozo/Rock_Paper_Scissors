@@ -18,22 +18,22 @@ function playRound(playerChoice, computerChoice) {
 
   if 
   (playerSelection === computerSelection){
-    span.textContent = "Tie"
+    winner.textContent = "Tie"
   }else if
     ((playerSelection === "rock") && (computerSelection === "scissor")) {
       playerScore++;
-      span.textContent = "Rock beats Scissor you win!"
+      winner.textContent = "Rock beats Scissor you win!"
   }else if 
     ((playerSelection === "scissor") && (computerSelection === "paper")){
       playerScore++;
-      span.textContent = "Scissor beats Paper you win!"
+      winner.textContent = "Scissor beats Paper you win!"
   }else if 
     ((playerSelection === "paper") && (computerSelection === "rock")){
       playerScore++;
-      span.textContent = "Paper beats Rock you win!"
+      winner.textContent = "Paper beats Rock you win!"
   }else {
     computerScore++;
-    span.textContent = "You Lose :("
+    winner.textContent = "You Lose :("
   }
 }
 
@@ -63,8 +63,8 @@ const scissors = document.querySelector('#scissors');
 scissors.classList.add('scissors');
 const score = document.querySelector('#score');
 score.classList.add('score');
-const span = document.querySelector('#span');
-span.classList.add('span');
+const winner = document.querySelector('#winner');
+winner.classList.add('winner');
 
 document.getElementById('rock').onclick = function() {
     console.log(playRound("rock", getComputerChoice));  
