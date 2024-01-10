@@ -31,7 +31,15 @@ function playRound(playerChoice, computerChoice) {
     computerScore++;
     winner.textContent = "You Lose :("
   }
-  currentScore.textContent = "you:"+playerScore+" AI:"+computerScore; 
+  currentScore.textContent = "you:"+playerScore+" AI:"+computerScore;
+  
+  if (playerScore > 3) {
+    champion.textContent = "You Win the game!!!"
+  }else if (computerScore < 3) {
+    champion.textContent= "You Lost the game :("
+  }else {
+    return String("Its a Draw")
+  }
 }
 
 const rock = document.querySelector('#rock');
@@ -46,6 +54,8 @@ const winner = document.querySelector('#winner');
 winner.classList.add('winner');
 const currentScore = document.querySelector('#currentScore');
 currentScore.classList.add('currentScore');
+const champion = document.querySelector('#champion');
+champion.classList.add('champion');
 
 document.getElementById('rock').onclick = function() {
     console.log(playRound("rock", getComputerChoice));  
